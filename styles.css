@@ -1,0 +1,179 @@
+.header {
+    background-color: aliceblue;
+    color:black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.tagline {
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.h2 {
+    font-family: 'Courier New', Courier, monospace;
+    color:black;
+    padding: 20px;
+    text-align: left;
+    font-size: 30px;
+}
+
+.ul {
+    position: sticky;
+    top: 0;
+    display: flex;
+    gap: 150px;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    /*overflow: hidden;*/
+    background-color: lightskyblue;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.ul li {
+    position: relative;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+a:hover {
+    font-weight: bolder;
+}
+
+a:visited {
+    color:black
+}
+
+.wrap-text {
+    overflow: auto;
+    line-height: 1.6;
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.float-image {
+    float: right;
+    margin: 0 0 10px 20px;
+    width: 350px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.logo-images {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    float: center;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.footer {
+    background-image: url(images/footer_background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-img {
+    position: absolute;
+    width: 75px;
+    height: auto;
+}
+
+.f-img-1 {
+    margin-left: 28%;
+    margin-top: 125px;
+    width: 100px;
+}
+
+.f-img-2 {
+    margin-left: 31%;
+    margin-top: 125px;
+    width: 100px
+}
+
+.wrap-text-2 {
+    margin-top: -25px;
+    overflow: auto;
+    line-height: 1.6;
+    padding: 20px;
+    font-size: 18px;
+    vertical-align: top;
+}
+
+.float-image-2 {
+    float: left;
+    margin: 0 20px 10px 0px;
+    width: 350px;
+    height: auto;
+    border-radius: 8px;
+    vertical-align: top;
+}
+
+.h3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22;
+    font-weight: bolder;
+    text-shadow: -2px 2px #87cefa;
+}
+
+.dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: lightskyblue;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    padding: 8px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown:hover .dropdown-label {
+    font-weight: bold;
+}
+
+.dropdown-menu li a:hover {
+    font-weight: bold;
+}
