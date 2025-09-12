@@ -193,7 +193,7 @@ a:visited {
   .ul {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     padding: 10px 0;
   }
 
@@ -208,11 +208,11 @@ a:visited {
     z-index: 1000;
   }
 
+  .dropdown:focus-within .dropdown-menu,
   .dropdown:hover .dropdown-menu {
     display: block;
   }
 
-  /* Optional: fix text getting cut off behind dropdown */
   .dropdown-menu li {
     padding: 10px 20px;
     white-space: nowrap;
