@@ -188,52 +188,52 @@ a:visited {
     padding: 0;
     width: 100%;
     overflow-x: hidden;
+    box-sizing: border-box;
   }
 
-  /* Sticky navbar */
+  /* Keep navbar horizontal and sticky */
   .ul {
     position: sticky;
     top: 0;
     display: flex;
     flex-wrap: nowrap;
     gap: 20px;
-    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
     background-color: lightskyblue;
     font-size: 16px;
+    justify-content: center;
     z-index: 1000;
-    padding: 10px;
+    white-space: nowrap;
+    overflow-x: auto;
   }
 
   .ul li {
-    white-space: nowrap;
+    flex-shrink: 0;
   }
 
-  /* Force dropdown to auto-close on touch */
-  .dropdown:hover .dropdown-menu {
-    display: none;
-  }
-
-  .dropdown:focus-within .dropdown-menu {
-    display: block;
-  }
-
+  /* Allow dropdown to close on outside click using focus */
   .dropdown-menu {
+    display: none;
     position: absolute;
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     background-color: lightskyblue;
-    z-index: 999;
-    display: none;
+    z-index: 1000;
     min-width: 150px;
   }
 
-  .dropdown-label:focus + .dropdown-menu,
-  .dropdown-menu:hover {
+  .dropdown:hover .dropdown-menu,
+  .dropdown:focus-within .dropdown-menu {
     display: block;
   }
 
-  /* Ensure all content fits the screen */
+  /* Ensure images resize and text fills width */
   .wrap-text,
   .wrap-text-2 {
     margin: 0 auto;
@@ -254,44 +254,39 @@ a:visited {
     margin: 20px auto;
   }
 
-  .h2 {
-    font-size: 24px;
+  .h2, .h3 {
+    font-size: 22px;
     text-align: center;
   }
 
-  .h3 {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  /* Responsive footer layout */
+  /* Footer layout for small screens */
   .footer {
     height: auto;
-    padding: 20px;
+    padding: 20px 10px;
     text-align: center;
+    background-size: cover;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
   }
 
   .footer > div {
     position: static !important;
     transform: none !important;
-    margin-bottom: 10px;
-    width: 45%;
-    min-width: 150px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .footer img {
     max-width: 60px;
     height: auto;
-    display: block;
-    margin: 0 auto;
   }
 
   .footer p {
     font-size: 16px;
-    margin: 10px 0 0;
+    word-break: break-word;
+    padding: 0 10px;
   }
 }
