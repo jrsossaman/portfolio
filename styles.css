@@ -183,22 +183,45 @@ a:visited {
 
 
 @media only screen and (max-width: 768px) {
-  body, html {
+  html, body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
+    width: 100%;
   }
 
   .ul {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: none;
+    width: max-content;
+    background-color: lightskyblue;
+    z-index: 1000;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  /* Optional: fix text getting cut off behind dropdown */
+  .dropdown-menu li {
+    padding: 10px 20px;
+    white-space: nowrap;
   }
 
   .wrap-text,
   .wrap-text-2 {
     margin: 0 5%;
+    width: 90%;
     padding: 10px;
   }
 
@@ -211,45 +234,25 @@ a:visited {
     margin: 20px auto;
   }
 
-  .h2,
-  .h3 {
-    text-align: center;
-    padding: 10px;
-    margin: 10px 0;
-  }
-
-  .h2 {
-    font-size: 24px;
-  }
-
-  .h3 {
-    font-size: 20px;
-  }
-
-  .logo-images {
-    display: block;
-    max-width: 100%;
-    margin: 10px auto;
-  }
-
-  footer {
+  .footer {
+    position: static;
     height: auto;
-    padding: 20px;
+    padding: 30px 10px;
     text-align: center;
   }
 
-  footer div {
+  .footer div {
     position: static !important;
     transform: none !important;
     margin-bottom: 20px;
   }
 
-  footer img {
-    width: 80px;
-    height: auto;
+  .footer img {
+    width: 60px;
   }
 
-  footer p {
-    font-size: 18px;
+  .footer p {
+    font-size: 16px;
+    margin: 10px 0 0;
   }
 }
