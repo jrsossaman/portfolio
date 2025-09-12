@@ -184,75 +184,73 @@ a:visited {
 
 @media only screen and (max-width: 768px) {
   html, body {
-    overflow-x: hidden;
     margin: 0;
     padding: 0;
     width: 100%;
+    overflow-x: hidden;
   }
 
   .ul {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    gap: 30px;
     justify-content: center;
-    gap: 10px;
-    padding: 10px 0;
-  }
-
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    transform: none;
-    width: max-content;
-    background-color: lightskyblue;
-    z-index: 1000;
-  }
-
-  .dropdown:focus-within .dropdown-menu,
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-
-  .dropdown-menu li {
-    padding: 10px 20px;
-    white-space: nowrap;
+    font-size: 16px;
   }
 
   .wrap-text,
   .wrap-text-2 {
-    margin: 0 5%;
+    margin-left: 5%;
+    margin-right: 5%;
     width: 90%;
-    padding: 10px;
+    font-size: 16px;
   }
 
   .float-image,
-  .float-image-2 {
+  .float-image-2,
+  .logo-images {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
     float: none;
     display: block;
-    width: 100%;
-    max-width: 100%;
     margin: 20px auto;
   }
 
   .footer {
-    position: static;
     height: auto;
-    padding: 30px 10px;
+    padding: 20px;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
   }
 
-  .footer div {
+  .footer > div {
     position: static !important;
     transform: none !important;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    width: 45%;
+    min-width: 150px;
   }
 
   .footer img {
-    width: 60px;
+    max-width: 60px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
 
   .footer p {
     font-size: 16px;
     margin: 10px 0 0;
+  }
+
+  .h2 {
+    font-size: 24px;
+  }
+
+  .h3 {
+    font-size: 20px;
   }
 }
