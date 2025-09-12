@@ -177,3 +177,79 @@ a:visited {
 .dropdown-menu li a:hover {
     font-weight: bold;
 }
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+  body, html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .wrap-text,
+  .wrap-text-2 {
+    margin: 0 5%;
+    padding: 10px;
+  }
+
+  .float-image,
+  .float-image-2 {
+    float: none;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 20px auto;
+  }
+
+  .h2,
+  .h3 {
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  .h2 {
+    font-size: 24px;
+  }
+
+  .h3 {
+    font-size: 20px;
+  }
+
+  .logo-images {
+    display: block;
+    max-width: 100%;
+    margin: 10px auto;
+  }
+
+  footer {
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  footer div {
+    position: static !important;
+    transform: none !important;
+    margin-bottom: 20px;
+  }
+
+  footer img {
+    width: 80px;
+    height: auto;
+  }
+
+  footer p {
+    font-size: 18px;
+  }
+}
