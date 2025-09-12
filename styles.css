@@ -190,32 +190,81 @@ a:visited {
     overflow-x: hidden;
   }
 
+  /* Sticky navbar */
   .ul {
+    position: sticky;
+    top: 0;
+    display: flex;
     flex-wrap: nowrap;
-    gap: 30px;
+    gap: 20px;
     justify-content: center;
+    background-color: lightskyblue;
     font-size: 16px;
+    z-index: 1000;
+    padding: 10px;
   }
 
+  .ul li {
+    white-space: nowrap;
+  }
+
+  /* Force dropdown to auto-close on touch */
+  .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+
+  .dropdown:focus-within .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: lightskyblue;
+    z-index: 999;
+    display: none;
+    min-width: 150px;
+  }
+
+  .dropdown-label:focus + .dropdown-menu,
+  .dropdown-menu:hover {
+    display: block;
+  }
+
+  /* Ensure all content fits the screen */
   .wrap-text,
   .wrap-text-2 {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: 0 auto;
+    padding: 10px;
     width: 90%;
+    box-sizing: border-box;
     font-size: 16px;
   }
 
   .float-image,
   .float-image-2,
   .logo-images {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
     float: none;
     display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     margin: 20px auto;
   }
 
+  .h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  /* Responsive footer layout */
   .footer {
     height: auto;
     padding: 20px;
@@ -244,13 +293,5 @@ a:visited {
   .footer p {
     font-size: 16px;
     margin: 10px 0 0;
-  }
-
-  .h2 {
-    font-size: 24px;
-  }
-
-  .h3 {
-    font-size: 20px;
   }
 }
