@@ -183,110 +183,112 @@ a:visited {
 
 
 @media only screen and (max-width: 768px) {
+  /* General resets */
   html, body {
     margin: 0;
     padding: 0;
-    width: 100%;
     overflow-x: hidden;
+    width: 100%;
     box-sizing: border-box;
   }
 
-  /* Keep navbar horizontal and sticky */
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+
+  /* Navbar remains horizontal & sticky */
   .ul {
     position: sticky;
     top: 0;
     display: flex;
-    flex-wrap: nowrap;
-    gap: 20px;
-    list-style-type: none;
-    margin: 0;
-    padding: 10px;
+    flex-wrap: nowrap; /* keeps the items in one row */
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 5px;
     background-color: lightskyblue;
     font-size: 16px;
-    justify-content: center;
     z-index: 1000;
-    white-space: nowrap;
-    overflow-x: auto;
+    overflow-x: auto; /* allow scrolling if navbar items exceed width */
   }
 
   .ul li {
     flex-shrink: 0;
+    white-space: nowrap;
   }
 
-  /* Allow dropdown to close on outside click using focus */
+  /* Dropdown behavior & close on touch */
   .dropdown-menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
     background-color: lightskyblue;
     z-index: 1000;
-    min-width: 150px;
+    min-width: 120px;
+    padding: 5px 0;
   }
-
   .dropdown:hover .dropdown-menu,
   .dropdown:focus-within .dropdown-menu {
     display: block;
   }
 
-  /* Ensure images resize and text fills width */
-  .wrap-text,
-  .wrap-text-2 {
-    margin: 0 auto;
+  /* Skills & Projects: ensure full content visible, no cutoff */
+  .wrap-text, .wrap-text-2 {
+    margin: 0 5%;
     padding: 10px;
     width: 90%;
-    box-sizing: border-box;
-    font-size: 16px;
+    overflow: visible; /* allow content to expand inside container */
   }
 
-  .float-image,
-  .float-image-2,
-  .logo-images {
+  .float-image, .float-image-2, .logo-images {
     float: none;
     display: block;
     width: 100%;
     max-width: 100%;
     height: auto;
-    margin: 20px auto;
+    margin: 15px auto;
   }
 
-  .h2, .h3 {
-    font-size: 22px;
+  /* Headings */
+  .h2 {
+    font-size: 24px;
     text-align: center;
+    margin: 10px 0;
+  }
+  .h3 {
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 0;
   }
 
-  /* Footer layout for small screens */
+  /* Footer adjustments */
   .footer {
+    position: static;
     height: auto;
     padding: 20px 10px;
-    text-align: center;
-    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    width: 100%;
   }
-
   .footer > div {
     position: static !important;
     transform: none !important;
     margin: 10px 0;
     width: 100%;
     max-width: 100%;
-    box-sizing: border-box;
   }
-
   .footer img {
     max-width: 60px;
     height: auto;
+    margin: 0 auto;
   }
-
   .footer p {
     font-size: 16px;
-    word-break: break-word;
+    margin: 5px 0 0;
+    word-wrap: break-word; /* ensure long email / text wraps rather than overflow */
     padding: 0 10px;
   }
 }
