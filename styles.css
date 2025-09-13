@@ -235,10 +235,12 @@ a:visited {
 
   /* Skills & Projects: ensure full content visible, no cutoff */
   .wrap-text, .wrap-text-2 {
-    margin: 0 5%;
+    margin-left: 5%;
+    margin-right: 5%;
     padding: 10px;
     width: 90%;
     overflow: visible; /* allow content to expand inside container */
+    text-align: center;
   }
 
   .float-image, .float-image-2, .logo-images {
