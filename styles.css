@@ -146,6 +146,15 @@ a:visited {
     font-size: 22;
     font-weight: bolder;
     text-shadow: -2px 2px #87cefa;
+    margin-left: 102px
+}
+
+.h4 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22;
+    font-weight: bolder;
+    text-shadow: -2px 2px #87cefa;
+    margin-left: 57px;
 }
 
 .dropdown {
@@ -262,7 +271,12 @@ a:visited {
     font-size: 20px;
     text-align: center;
     margin: 10px 0;
-    margin-left: 25%
+  }
+
+  .h4 {
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 0;
   }
 
   .footer {
