@@ -288,7 +288,7 @@ a:visited {
     margin: 0 auto;
   }
   .footer p {
-    font-size: 16px;
+    font-size: 12px;
     margin: 5px 0 0;
     word-wrap: break-word; /* ensure long email / text wraps rather than overflow */
     padding: 0 10px;
