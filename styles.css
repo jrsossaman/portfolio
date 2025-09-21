@@ -148,6 +148,14 @@ a:visited {
     vertical-align: top;
 }
 
+.h2sh0 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22;
+    font-weight: bolder;
+    text-shadow: -2px 2px #87cefa;
+    text-align: center;
+}
+
 .h3 {
     font-family: 'Courier New', Courier, monospace;
     font-size: 22;
